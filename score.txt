@@ -1,0 +1,9 @@
+tong: 30
+tong : 20
+tong : 10
+tong : 50
+tong : 0
+�ͧ : 20
+tong : 10
+tong : 30
+tong : 10
