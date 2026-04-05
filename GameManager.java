@@ -41,7 +41,9 @@ public class GameManager {
                 try {
                     System.out.print("Answer: ");
                     int ans = sc.nextInt();
-
+                    if (ans < 0) {
+                        throw new InvalidChoiceException("Answer must be positive");
+}
                     history.push("Correct: " + correct + " Your: " + ans);
                     int damage = 10;
                     if (ans == correct) {
@@ -53,9 +55,11 @@ public class GameManager {
                         player.takeDamage(damage);
                     }
 
-                } catch (Exception e) {
+                } catch (InvalidChoiceException e) {
+                    System.out.println(e.getMessage());
+                    } catch (Exception e) {
                     System.out.println("number only ):<");
-                    sc.next(); // clear buffer
+                    sc.next(); 
                 }
 
                 System.out.println("Player HP: " + player.getHp() +
