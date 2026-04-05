@@ -45,20 +45,21 @@ public class GameManager {
             } catch (InvalidChoiceException e) {
                 displayData(e.getMessage());
             }
+             sc.close();
         }
 
         switch (choice) {
-            case 1 -> {
+            case 1:{
                 damage = 5;
                 playerHP = 120;
                 enemyHP = 80;
             }
-            case 2 -> {
+            case 2:{
                 damage = 10;
                 playerHP = 100;
                 enemyHP = 100;
             }
-            case 3 -> {
+            case 3:{
                 damage = 15;
                 playerHP = 80;
                 enemyHP = 120;
@@ -160,4 +161,6 @@ public class GameManager {
     public <T> void displayFormatted(String label, T data) {
         System.out.println(label + ": " + data);
     }
+
+    
 }

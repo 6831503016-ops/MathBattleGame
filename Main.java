@@ -18,14 +18,14 @@ public class Main {
                         choice = sc.nextInt();
                         sc.nextLine();
                         switch (choice) {
-                            case 1 -> {
+                            case 1:{
                                 break OUTER; // เล่นต่อ
                             }
-                            case 2 -> {
+                            case 2:{
                                 System.out.println("Goodbye!");
                                 return; // ออกจากโปรแกรมเลย
                             }
-                            default -> System.out.println("Please enter only 1 or 2");
+                            default : System.out.println("Please enter only 1 or 2");
                         }
                     }catch (Exception e) {
                         System.out.println("Numbers only!");
